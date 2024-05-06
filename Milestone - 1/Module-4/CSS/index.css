@@ -1,0 +1,35 @@
+/* *{
+    margin: 0;
+    padding: 0;
+} */
+nav ul{
+    display: flex;
+}
+ul li{
+    list-style-type: none;
+    margin: 0 5px 0 0;
+    border: 1px solid gray;
+    padding: 5px;
+    background-color: chartreuse;
+    font-weight: bold;
+}
+li a{
+    text-decoration: none;
+}
+label{
+    display: block;
+}
+article{
+    margin: 10px 0px;
+}
+label{
+    margin: 2px 0px;
+}
+footer{
+    background-color: black;
+    padding: 50px;
+    width: 50%;
+    color: white;
+    text-align: center;
+    margin: 50px auto;
+}
