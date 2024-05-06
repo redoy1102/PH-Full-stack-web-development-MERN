@@ -1,0 +1,34 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.header h1{
+    background-image: url('../images/fbcover.jpg');
+    background-size: 50% auto;
+    background-repeat: no-repeat;
+    color: white;
+}
+.blog{   
+    background-color:aqua;
+    margin: 10px;
+    padding: 5px;
+    border: dotted;
+    border-color: red;
+    border-radius: 10px;
+}
+.blog p{
+    color: black;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: red solid;
+    margin: 10px;
+    padding: 10px;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+}
