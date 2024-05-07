@@ -16,12 +16,21 @@ body{
     font-size: 20px;
     padding: 18px 35px 19px 36px;
 }
+.section-title{
+    font-size: 35px;
+    font-weight: 700;
+    text-align: center;
+}
+.section-description{
+    color: #757575;
+    font-size: 18px;
+    text-align: center;
+}
 /* nav-bar */
 .nav-title{
     font-size: 45px;
     font-weight: 800;
 }
-
 nav{
     display: flex;
     justify-content: space-between;
@@ -49,13 +58,80 @@ nav ul a{
 /* header related styles */
 .header{
     background-color: #FFF8F3;
+    background-image: url('../images/header_bg.png');
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    margin-bottom: 0;
 }
 .banner{
-    padding: 30px 30px 30px 150px; 
+    padding: 30px 30px 0px 150px; 
     display: flex;
     align-items: center;
+    justify-content: space-between;
+}
+.banner > div{
+    max-width: 585px;
+    max-height: 262px;
+}
+.banner-content h3{
+    color: #474747;
+    size: 45px;
+    margin-bottom: 0;
+}
+.banner-content h1{
+    color: #181818;
+    size: 85px;
+    margin-top: 5px;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+.banner-content p{
+    color: #757575;
+    size: 18px;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+.banner-content button{
+    margin-top: 30px;
+    margin-right: 30px;
+}
+.first-btn{
+    width: 200px;
+    height: 64px;
+}
+.second-btn{
+    width: 160px;
+    height: 64px;
 }
 .banner img{
     width: 584px;
     height: 676px;
+}
+
+/* main section */
+main{
+    max-width: 1140px;
+    margin: 0 auto;
+}
+/* about section */
+.about{
+    background-color: #FFF8F3;
+    padding: 131px;
+    margin: 130px 0;
+}
+.about-title{
+    color: #757575;
+    font-size: 20px;
+}
+.about-info-description{
+    color: #474747;
+    font-size: 20px;
+    font-weight: 700;
+}
+.about-info{
+    text-align: center;
+}
+.about-info-container{
+    display: flex;
+    justify-content: space-between;
 }
