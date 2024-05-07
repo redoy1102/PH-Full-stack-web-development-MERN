@@ -1,26 +1,47 @@
-*{
-    margin: 0;
+/* Common shared style */
+body{
     font-family: "Open Sans", sans-serif;
+}
+.primary-color{
+    color: #FD6E0A;
+}
+.primary-btn{
+    background-color: #FD6E0A;
+    border-radius: 5px;
+    border: #FD6E0A;
+    width: 150px;
+    height: 64px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 18px 35px 19px 36px;
 }
 /* nav-bar */
 .nav-title{
     font-size: 45px;
     font-weight: 800;
 }
-nav h2 span{
-    color: #FD6E0A;
-}
 
 nav{
     display: flex;
     justify-content: space-between;
     margin: 51px 200px;
-
+    align-items: center;
 }
-nav ul{
+nav > ul{
     display: flex;
+    align-items: center;
 }
 nav li{
     list-style: none;
     margin-right: 51px;
+}
+nav > a{
+    text-decoration: none;
+    color: black;
+}
+nav ul a{
+    color: #474747;
+    text-decoration: none;
+    font-size: 20px;
 }
