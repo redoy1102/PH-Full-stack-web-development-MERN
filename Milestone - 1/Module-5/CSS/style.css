@@ -19,12 +19,12 @@ body{
 .section-title{
     font-size: 35px;
     font-weight: 700;
-    text-align: center;
 }
 .section-description{
-    color: #757575;
     font-size: 18px;
-    text-align: center;
+}
+.pdescription, .section-description{
+    color: #757575;
 }
 /* nav-bar */
 .nav-title{
@@ -118,6 +118,7 @@ main{
     background-color: #FFF8F3;
     padding: 131px;
     margin: 130px 0;
+    text-align: center;
 }
 .about-title{
     color: #757575;
@@ -128,10 +129,37 @@ main{
     font-size: 20px;
     font-weight: 700;
 }
-.about-info{
-    text-align: center;
-}
 .about-info-container{
     display: flex;
+    justify-content: space-around;
+}
+
+/* what section  */
+.what{
+    text-align: center;
+}
+.ptitle{
+    color: #181818;
+    font-weight: bold;
+    font-size: 20px;
+    margin: 30px 0 20px 0;
+}
+.pdescription{
+    font: 16px;
+}
+.programming_language{
+    display: flex;
+    gap: 24px;
+    text-align: left;
     justify-content: space-between;
+}
+.programming_language div{
+    margin-top: 0px;
+    background: #FFFFFF;
+    box-shadow: 0px 6px 50px rgba(0,0,0,0.06);
+    border-radius: 5px;
+    padding: 30px;
+}
+.what > p{
+    margin-bottom: 50px;
 }
