@@ -10,13 +10,21 @@ body{
     background-color: #FD6E0A;
     border-radius: 5px;
     border: #FD6E0A;
-    width: 150px;
+    width: auto;
     height: 64px;
     color: white;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 15px;
     padding: 18px 35px 19px 36px;
+    cursor: pointer;
 }
+
+/* Ensure the icon and text are on the same line */
+.primary-btn i {
+    font-size: 18px; /* Adjust icon size if needed */
+    margin-right: 10px; /* Space between icon and text */
+} */
+
 .section-title{
     font-size: 35px;
     font-weight: 700;
@@ -35,7 +43,7 @@ body{
 nav{
     display: flex;
     justify-content: space-between;
-    margin: 0 200px;
+    padding: 50px 200px;
     align-items: center;
 }
 nav > ul{
@@ -228,12 +236,18 @@ way-1 to center the button without class
 .footer-form input, textarea{
     margin-bottom: 24px;
     border: none;
+    width: 100%;
 }
 
 .footer-form textarea{
     padding: 18px 30px;
 }
+
 .footer-form input{
     padding: 18px 30px;
+}
+
+.footer-links a{
+    text-decoration: none;
 }
 
