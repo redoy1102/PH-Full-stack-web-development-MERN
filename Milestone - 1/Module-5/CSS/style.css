@@ -217,5 +217,23 @@ way-1 to center the button without class
     text-align: center;
 }
 
+.footer-container{
+    display: flex;
+    gap: 117px;
+    background-color: #FFF8F3;
+    padding: 130px 200px;
+    margin-top: 113px;
+}
 
+.footer-form input, textarea{
+    margin-bottom: 24px;
+    border: none;
+}
+
+.footer-form textarea{
+    padding: 18px 30px;
+}
+.footer-form input{
+    padding: 18px 30px;
+}
 
