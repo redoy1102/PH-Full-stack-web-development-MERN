@@ -1,0 +1,19 @@
+.container{
+    background-color: purple;
+    border: 5px dashed black;
+    display: flex;
+    align-items: stretch;
+    height: 300px;
+}
+
+.box{
+    width: 100px;
+    border: 2px dashed red;
+    background-color: aqua;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#box_2{
+    flex-grow: 1;
+}
