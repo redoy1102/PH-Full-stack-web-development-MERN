@@ -1,3 +1,59 @@
+.animation .box{
+    width: 200px;
+    height: 200px;
+    border: 2px solid cadetblue;
+    background-color: cyan;
+    transition: width 3s, height 3s, transform 1s;
+}
+
+.animation .box:hover{
+    width: 400px;
+    height: 400px;
+    transform: rotate(180deg);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.container, .inner{
+    width: 150px;
+    height: 150px;
+    border: 2px solid khaki;
+}
+.container{
+    background-color: lightblue;
+}
+.inner{
+    background-color: lightcoral;
+    transform: translate(200px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .mega_box{
     width: 500px;
     height: 400px;
