@@ -1,5 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+}
 
+nav{
+    display: flex;
+    justify-content: space-between;
+    margin: 50px;
+}
 
+nav a{
+    color: black;
+    margin-right: 10px;
+    text-decoration: none;
+    font-size: 20px;
+    border: 1px solid goldenrod;
+    padding: 20px;
+    background-color: goldenrod;
+    color: white;
+    border-radius: 5px;
+}
 
 .container{
     background-color: purple;
