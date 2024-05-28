@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+
+    <title>Practice Responsive</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 10px 0;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+
+        .gallery .card {
+            padding: 10px;
+            border: 1px solid gray;
+            border-radius: 10px;
+        }
+
+        .gallery .card img {
+            width: 100%;
+        }
+
+        .gallery .card p:nth-of-type(3) {
+            text-align: justify;
+        }
+
+        .gallery .card button{
+            width: 100%;
+            margin-top: 5px;
+            font-size: 20px;
+            border: none;
+            background-color: gold;
+            padding: 5px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .gallery .card button:hover{
+            color: white;
+            background-color: black;
+        }
+
+        @media screen and (max-width: 576px) {
+            .gallery {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+
+        @media screen and (min-width: 577px) and (max-width: 992px) {
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Popular Collections</h1>
+    <div class="gallery-container">
+        <section class="gallery">
+            <div class="card">
+                <img src="c-7.png" alt="">
+                <h2>C Programming Private Batch-7</h2>
+                <p>100</p>
+                <p>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                </p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, aliquid.</p>
+                <button> <i class="fa-solid fa-circle-info"></i> Details</button>
+            </div>
+            <div class="card">
+                <img src="c-7.png" alt="">
+                <h2>Product-2</h2>
+                <p>200</p>
+                <p>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                </p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, similique?</p>
+            </div>
+            <div class="card">
+                <img src="c-7.png" alt="">
+                <h2>Product-3</h2>
+                <p>300</p>
+                <p>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                </p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, similique?</p>
+            </div>
+            <div class="card">
+                <img src="c-7.png" alt="">
+                <h2>Product-4</h2>
+                <p>400</p>
+                <p>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                </p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium, unde.</p>
+            </div>
+            <div class="card">
+                <img src="c-7.png" alt="">
+                <h2>Product-5</h2>
+                <p>500</p>
+                <p>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                </p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, similique?</p>
+            </div>
+            <div class="card">
+                <img src="c-7.png" alt="">
+                <h2>Product-6</h2>
+                <p>600</p>
+                <p>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                </p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, similique?</p>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>
