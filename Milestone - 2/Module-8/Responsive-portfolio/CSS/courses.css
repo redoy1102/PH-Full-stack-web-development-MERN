@@ -1,0 +1,17 @@
+.shadow-div{
+    width: 200px;
+    height: 200px;
+    margin: 50px auto;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 5px 5px 5px gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+}
+.course-container{
+    display: flex;
+    justify-content: space-evenly;
+}
