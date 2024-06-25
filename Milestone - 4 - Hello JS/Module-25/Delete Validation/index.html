@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Welcome to Delete Validation</h1>
+    <div id="course">
+        <h2>C Programming Private Batch</h2>
+        <p>Price $20</p>
+    </div>
+
+    <input type="text" id="input_field" placeholder="Type delete">
+
+    <button id="delete_btn" disabled>Delete</button>
+
+    <script>
+        // handling delete button
+        document.getElementById('input_field').addEventListener('keyup', function(event){
+            const text = event.target.value;
+            const delete_btn = document.getElementById('delete_btn');
+            
+            if(text === 'delete'){
+                delete_btn.removeAttribute('disabled');
+            }
+            else{
+                delete_btn.setAttribute('disabled', true);
+            }
+        })
+        
+        document.getElementById('delete_btn').addEventListener('click', function(){
+            const course = document.getElementById('course');
+            course.style.display = 'none';
+        })
+
+    </script>
+</body>
+</html>

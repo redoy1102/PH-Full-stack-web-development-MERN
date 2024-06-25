@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FB Comment Box</title>
+</head>
+
+<body>
+    <div id="comment_container">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus molestias veritatis omnis debitis natus
+            ipsum possimus ab id, inventore neque, fugit, corporis nisi itaque sapiente. Eum consectetur quod id
+            sapiente, vitae repellat debitis esse provident atque dolor laudantium eius maiores voluptate corporis nobis
+            qui expedita autem porro, nesciunt cupiditate quaerat harum recusandae. Sint corporis minima provident
+            asperiores! Tenetur saepe exercitationem doloremque laudantium id, laboriosam sint necessitatibus culpa
+            reiciendis eum eos eveniet quos. Possimus, tempora, nostrum quos obcaecati quisquam minus aliquam ipsam
+            necessitatibus iure accusantium vel adipisci rem reprehenderit exercitationem facilis fugit, perspiciatis
+            quis vitae dolorum libero! Similique doloribus laborum vitae!</p>
+    </div>
+
+    <div id="post_container">
+        <textarea name="" id="text-area" cols="40" rows="10" placeholder="Enter your comment here"></textarea><br>
+        <button id="post-btn">Post</button>
+    </div>
+
+    <script>
+        function lengthValidation(string) {
+            if (string.length >= 10) {
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
+        document.getElementById('post-btn').addEventListener('click', function () {
+
+            const textArea = document.getElementById('text-area');
+
+            const textAreaValue = textArea.value;
+            // console.log(textAreaValue);
+            if (lengthValidation(textAreaValue) == true) {
+                const p = document.createElement('p'); p.innerText = textAreaValue;
+
+                document.getElementById('comment_container').appendChild(p);
+
+                textArea.value = '';
+            }
+            else {
+                const postContainer = document.getElementById('post_container');
+
+                const p = document.createElement('p');
+
+                p.innerText = "Length should be greater than or equal to 10.";
+
+                p.style.color = 'red';
+
+                post_container.appendChild(p);
+            }
+
+        })
+    </script>
+</body>
+
+</html>
