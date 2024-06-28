@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geometry Gem</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="m-0 p-0">
+    <header
+        class="flex flex-col justify-center items-center md:mx-12 md:mt-12 md:flex-row md:justify-between bg-cyan-100">
+
+
+        <!-- texts -->
+        <div class="text-center py-4 px-10 md:text-left">
+            <h1 class="inter-font font-bold text-3xl md:text-5xl">Interactive</h1>
+            <p class="inter-font font-normal text-2xl md:text-3xl">Geometry Genius</p>
+        </div>
+
+
+        <!-- button -->
+        <div class="py-4 px-10">
+            <button
+                class="inter-font text-xl font-bold text-white bg-sky-500 hover:bg-sky-400 px-9 py-2 rounded cursor-pointer">Blog</button>
+        </div>
+    </header>
+
+    <main class="md:mx-12 md:mt-12">
+
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+
+
+            <!-- shapes -->
+            <div class="col-span-9">
+
+
+                <!-- shapes container -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-base-100 shadow-xl">
+                        <div class="py-12 px-10">
+                            <div class="flex justify-center items-center">
+                                <img src="./images/triangle.png" alt="Shoes" class="w-full h-auto" />
+                            </div>
+
+                            <h2 class="inter-font text-[#414141] font-bold text-xl text-center mt-12 mb-2">Triangle</h2>
+
+                            <p class="text-center mt-2 mb-5">Area (A) = 0.5 x b x h</p>
+
+                            <div class="flex items-center">
+                                <input class="bg-[#F1F1F1] rounded p-2 w-1/2" type="text" placeholder="b"> <span class="mx-1">cm</span>
+
+                                <input class="bg-[#F1F1F1] rounded p-2 w-1/2" type="text" placeholder="h"> <span class="mx-1">cm</span>
+                            </div>
+
+                            <div class="mt-12">
+                                <button
+                                    class="bg-sky-500 text-white inter-font font-bold text-xl rounded w-full py-1 cursor-pointer hover:bg-sky-400">Calculate
+                                </button>
+                            </div>
+                        </div>
+                    </div>  
+
+
+                    <div class="bg-base-100 shadow-xl">
+                        <div class="py-12 px-10">
+                            <div class="flex justify-center items-center">
+                                <img src="./images/rectangle.png" alt="Shoes" class="w-full h-auto" />
+                            </div>
+
+                            <h2 class="inter-font text-[#414141] font-bold text-xl text-center mt-12 mb-2">Rectangle</h2>
+
+                            <p class="text-center mt-2 mb-5">Area (A) = 0.5 x b x h</p>
+
+                            <div class="flex items-center">
+                                <input class="bg-[#F1F1F1] rounded p-2 w-1/2" type="text" placeholder="b"> <span class="mx-1">cm</span>
+
+                                <input class="bg-[#F1F1F1] rounded p-2 w-1/2" type="text" placeholder="h"> <span class="mx-1">cm</span>
+                            </div>
+
+                            <div class="mt-12">
+                                <button
+                                    class="bg-sky-500 text-white inter-font font-bold text-xl rounded w-full py-1 cursor-pointer hover:bg-sky-400">Calculate
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="bg-base-100 shadow-xl">
+                        <div class="py-12 px-10">
+                            <div class="flex justify-center items-center">
+                                <img src="./images/triangle.png" alt="Shoes" class="w-full h-auto" />
+                            </div>
+
+                            <h2 class="inter-font text-[#414141] font-bold text-xl text-center mt-12 mb-2">Triangle</h2>
+
+                            <p class="text-center mt-2 mb-5">Area (A) = 0.5 x b x h</p>
+
+                            <div class="flex items-center">
+                                <input class="bg-[#F1F1F1] rounded p-2 w-1/2" type="text" placeholder="b"> <span class="mx-1">cm</span>
+
+                                <input class="bg-[#F1F1F1] rounded p-2 w-1/2" type="text" placeholder="h"> <span class="mx-1">cm</span>
+                            </div>
+
+                            <div class="mt-12">
+                                <button
+                                    class="bg-sky-500 text-white inter-font font-bold text-xl rounded w-full py-1 cursor-pointer hover:bg-sky-400">Calculate
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="card bg-base-100 shadow-xl">
+                        <figure>
+                            <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
+                                alt="Shoes" />
+                        </figure>
+                        <div class="card-body">
+                            <h2 class="card-title">Shoes!</h2>
+                            <p>If a dog chews shoes whose shoes does he choose?</p>
+                            <div class="card-actions justify-end">
+                                <button class="btn btn-primary">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card bg-base-100 shadow-xl">
+                        <figure>
+                            <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
+                                alt="Shoes" />
+                        </figure>
+                        <div class="card-body">
+                            <h2 class="card-title">Shoes!</h2>
+                            <p>If a dog chews shoes whose shoes does he choose?</p>
+                            <div class="card-actions justify-end">
+                                <button class="btn btn-primary">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card bg-base-100 shadow-xl">
+                        <figure>
+                            <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
+                                alt="Shoes" />
+                        </figure>
+                        <div class="card-body">
+                            <h2 class="card-title">Shoes!</h2>
+                            <p>If a dog chews shoes whose shoes does he choose?</p>
+                            <div class="card-actions justify-end">
+                                <button class="btn btn-primary">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card bg-base-100 shadow-xl">
+                        <figure>
+                            <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
+                                alt="Shoes" />
+                        </figure>
+                        <div class="card-body">
+                            <h2 class="card-title">Shoes!</h2>
+                            <p>If a dog chews shoes whose shoes does he choose?</p>
+                            <div class="card-actions justify-end">
+                                <button class="btn btn-primary">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card bg-base-100 shadow-xl">
+                        <figure>
+                            <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
+                                alt="Shoes" />
+                        </figure>
+                        <div class="card-body">
+                            <h2 class="card-title">Shoes!</h2>
+                            <p>If a dog chews shoes whose shoes does he choose?</p>
+                            <div class="card-actions justify-end">
+                                <button class="btn btn-primary">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card bg-base-100 shadow-xl">
+                        <figure>
+                            <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
+                                alt="Shoes" />
+                        </figure>
+                        <div class="card-body">
+                            <h2 class="card-title">Shoes!</h2>
+                            <p>If a dog chews shoes whose shoes does he choose?</p>
+                            <div class="card-actions justify-end">
+                                <button class="btn btn-primary">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+            <!-- calculation -->
+            <div class="col-span-3">
+                <h1>Check</h1>
+            </div>
+        </div>
+
+    </main>
+</body>
+
+</html>
