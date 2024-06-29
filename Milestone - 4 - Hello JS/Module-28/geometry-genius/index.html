@@ -54,21 +54,18 @@
                         </figure>
 
                         <div class="py-12 px-10">
-                            <h2 class="inter-font text-[#414141] font-bold text-xl text-center mb-2">Triangle</h2>
+                            <h2 id="title_triangle" class="inter-font text-[#414141] font-bold text-xl text-center mb-2">Triangle</h2>
 
                             <p class="text-center mt-2 mb-5">Area (A) = 0.5 x b x h</p>
 
                             <div class="flex items-center">
-                                <input class="bg-[#F1F1F1] rounded p-2 w-1/2" type="text" placeholder="b"> <span
-                                    class="mx-1">cm</span>
+                                <input id="base_triangle" class="bg-[#F1F1F1] rounded p-2 w-1/2" type="text" placeholder="b"> <span class="mx-1">cm</span>
 
-                                <input class="bg-[#F1F1F1] rounded p-2 w-1/2" type="text" placeholder="h"> <span
-                                    class="mx-1">cm</span>
+                                <input id="height_triangle" class="bg-[#F1F1F1] rounded p-2 w-1/2" type="text" placeholder="h"> <span class="mx-1">cm</span>
                             </div>
 
                             <div class="mt-12">
-                                <button
-                                    class="bg-sky-500 text-white inter-font font-bold text-xl rounded w-full py-1 cursor-pointer hover:bg-sky-400">Calculate
+                                <button id="btn_triangle" class="bg-sky-500 text-white inter-font font-bold text-xl rounded w-full py-1 cursor-pointer hover:bg-sky-400">Calculate
                                 </button>
                             </div>
                         </div>
@@ -216,11 +213,14 @@
 
             <!-- calculation -->
             <div class="col-span-3 row-span-1 bg-base-100 shadow-xl">
-                <h1 class="inter-font text-xl font-bold text-center underline underline-offset-8 mt-7">Area Calculation</h1>
+                <h1 class="inter-font text-xl font-bold text-center underline underline-offset-8 mt-7">Area Calculation
+                </h1>
             </div>
         </div>
 
     </main>
+
+<script src="./scripts/triangle-calculate.js"></script>
 </body>
 
 </html>
