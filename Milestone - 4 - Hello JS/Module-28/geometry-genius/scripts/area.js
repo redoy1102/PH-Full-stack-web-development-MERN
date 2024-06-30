@@ -12,11 +12,24 @@ function returnValue(id) {
     return element.value;
 }
 
+function areaValidation(area) {
+    if (isNaN(area) == false) {
+        return true;
+    }
+    else {
+        return false;
+    }
+}
 
 function area(name, id1, id2) {
     if (name == 'triangle') {
         const triangleArea = 0.5 * parseFloat(returnValue(id1)) * parseFloat(returnValue(id2));
-        console.log(triangleArea);
+        if (areaValidation(triangleArea)){
+            console.log(triangleArea);
+        }
+        else {
+            console.log('Please type number.');
+        }
 
         clearInput(id1, id2);
     }
