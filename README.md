@@ -3,3 +3,5 @@
 2. Simple E-Commerce using Tailwind CSS: https://redoy1102.github.io/Simple-E-Commerce-Using-Tailwind-CSS/
 3. Simple E-Commerce using Daisy Ui: https://redoy1102.github.io/Simple-E-Commerce-using-Daisy-Ui/#slide1
 4. Money Tracker using Tailwind CSS and JS: https://github.com/redoy1102/Money-Tracker-using-Tailwind-CSS-and-JS
+## Raw JS Projects
+6. Geometry-Genius-Simple-JS-Dom-Project: https://geometry-genius-simple-js-dom-project.netlify.app/
