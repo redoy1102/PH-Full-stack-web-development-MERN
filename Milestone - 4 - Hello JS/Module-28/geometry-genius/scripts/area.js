@@ -21,11 +21,24 @@ function areaValidation(area) {
     }
 }
 
+function addToCalculationEntry(shapeName, area) {
+    const calculationContainer = returnElement('calculation_container');
+    const p = document.createElement('p');
+    p.classList.add('my-5');
+    p.classList.add('mx-5');
+
+    const count = calculationContainer.childElementCount;
+
+    p.innerHTML = `${count}. ${shapeName} - ${area} cm<sup>2</sup> <button class="btn btn-sm btn-primary">Convert to m<sup>2</sup></button>`;
+
+    calculationContainer.appendChild(p);
+}
+
 function area(name, id1, id2) {
     if (name == 'triangle') {
         const triangleArea = 0.5 * parseFloat(returnValue(id1)) * parseFloat(returnValue(id2));
         if (areaValidation(triangleArea)){
-            console.log(triangleArea);
+            addToCalculationEntry(name, triangleArea);
         }
         else {
             console.log('Please type number.');
@@ -34,33 +47,32 @@ function area(name, id1, id2) {
         clearInput(id1, id2);
     }
     else if (name == 'rectangle') {
-        // console.log('clicked')
         const rectangleArea = parseFloat(returnValue(id1)) * parseFloat(returnValue(id2));
-        console.log(rectangleArea);
+        addToCalculationEntry(name, rectangleArea);
 
         clearInput(id1, id2);
     }
     else if (name == 'ellipse') {
         const ellipseArea = 3.1416 * parseFloat(returnValue(id1)) * parseFloat(returnValue(id2));
-        console.log(ellipseArea);
-
+        addToCalculationEntry(name, ellipseArea);
         clearInput(id1, id2);
     }
     else if (name == 'parallelogram') {
         const parallelogramArea = parseFloat(returnValue(id1)) * parseFloat(returnValue(id2));
-        console.log(parallelogramArea);
+        addToCalculationEntry(name, parallelogramArea);
+        
 
         clearInput(id1, id2);
     }
     else if (name == 'pentagon') {
         const pentagonArea = 0.5 * parseFloat(returnValue(id1)) * parseFloat(returnValue(id2));
-        console.log(pentagonArea);
+        addToCalculationEntry(name, pentagonArea);
 
         clearInput(id1, id2);
     }
     else if (name == 'rhombus') {
-        const pentagonArea = 0.5 * parseFloat(returnValue(id1)) * parseFloat(returnValue(id2));
-        console.log(pentagonArea);
+        const rhombus = 0.5 * parseFloat(returnValue(id1)) * parseFloat(returnValue(id2));
+        addToCalculationEntry(name, rhombus);
 
         clearInput(id1, id2);
     }
