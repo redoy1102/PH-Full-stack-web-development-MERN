@@ -22,21 +22,35 @@
 <body>
     <header></header>
     <main>
-        <section id="search_section" class="mx-auto mb-12">
+
+        <!-- search bar  -->
+        <section id="search_section" class="mx-auto mb-8 md:mb-12">
             <h1 class="text-xl md:text-3xl font-semibold my-6 text-center">Search your Phone</h1>
             <div class="text-center">
-                <input id="phoneInputField" type="text" placeholder="Search"
+                <input id="phoneInputField" type="text" placeholder="Search" value="iphone"
                     class="input input-bordered input-accent md:w-3/5" />
                 <button onclick="searchPhone()" class="btn btn-primary text-white md:text-xl">Search</button>
             </div>
         </section>
 
-        <section id="card" class="md:mx-10 mb-12">
+        <!-- modal for phone details -->
+        <dialog id="modalForPhoneDetails" class="modal modal-bottom sm:modal-middle">
+        </dialog>
+
+        <!-- spinner  -->
+        <section id="spinnerForCards" class="flex justify-center mb-12 hidden">
+            <span class="loading loading-bars text-primary loading-lg"></span>
+        </section>
+
+        <!-- cards  -->
+        <section id="card" class="mb-8 md:mx-10 md:mb-12">
             <div id="phone_container" class="grid gap-2 grid-cols-1 justify-items-center md:grid-cols-2 lg:grid-cols-3">
 
             </div>
         </section>
 
+
+        <!-- show all button  -->
         <section id="showAllButtonSection" class="md:mx-10 mb-12 hidden">
             <button id="showAllButton" onclick="showAll()"
                 class="btn btn-primary text-white text-sm md:text-base w-full"></button>
