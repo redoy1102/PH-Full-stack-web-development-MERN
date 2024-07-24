@@ -1,38 +1,40 @@
 import PropTypes from 'prop-types';
 import { useState } from 'react';
+import './Country.css'
 
-const Country = ({ country }) => {
+// eslint-disable-next-line react/prop-types
+const Country = ({ country, handleVisitedCountries, handleSetFlag }) => {
     const [visited, setVisited] = useState(false);
-
     const [enroll, setEnroll] = useState(false)
 
     const { name, maps, flags, area } = country;
-    console.log(country);
+    // console.log(country);
 
-    const style = {
-        border: '1px solid red',
-        margin: '10px',
-        padding: '10px'
-    };
+    // console.log(handleVisitedCountries);
 
     return (
-        <div style={style}>
+        <div className={`country_style ${visited ? 'visited_style' : 'non_visited'}`}>
+
             <h3>Name: {name.common}</h3>
             <h2>{area}</h2>
             <a href={maps.googleMaps}>Map</a>
             <br />
             <img src={flags.png} alt={`${name.common} flag`} />
             <ul>
-                {country.altSpellings.map((element, index) => (
+                {country.altSpellings.map((element, index) => {
+                    // console.log(index);
                     <li key={index}>{element}</li>
-                ))}
+                })}
             </ul>
-            <button onClick={() => setVisited(!visited)}>{visited ? 'visited' : 'Going'}</button>
+            <button onClick={() => setVisited(!visited)}>
+                {visited ? 'visited' : 'Going'}
+            </button> <br />
+            {visited ? 'I have visited this country.' : ''} <br />
 
-            {visited ? 'I have visited this country.' : ''}
-            <button onClick={() => setEnroll(!enroll)}>
-                {enroll ? 'Enrolled' : 'Buy'}
-            </button>
+            <button onClick={() => handleVisitedCountries(country)}>Most visited</button> <br /> <br />
+
+            <button onClick={() => handleSetFlag(flags.png)}>Add Flag</button>
+
         </div>
     );
 };
@@ -50,7 +52,9 @@ Country.propTypes = {
         }).isRequired,
         area: PropTypes.number.isRequired,
         altSpellings: PropTypes.arrayOf(PropTypes.string).isRequired
-    }).isRequired
+    }).isRequired,
+    handleVisitedCountries: PropTypes.func.isRequired
 };
+
 
 export default Country;

@@ -1,0 +1,38 @@
+.parent_div{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+.btn_div{
+    grid-column: span 2;
+}
+
+.mangoes_container{
+    grid-column: span 6;
+}
+
+.cart_container{
+    /* border: 1px solid green; */
+    padding: 5px;
+    grid-column: span 4;
+}
+
+.center{
+    text-align: center;
+}
+
+.mangoes{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.cart_mangoes{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.product_div{
+    border: 1px solid green;
+    padding: 10px;
+    margin: 10px;
+}

@@ -3,3 +3,9 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 5px;
 }
+
+.img{
+    width: 80px;
+    margin-right: 5px;
+    /* height: 60px; */
+}
