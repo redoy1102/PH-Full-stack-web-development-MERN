@@ -1,0 +1,42 @@
+[
+    {
+        "id": "A1x5",
+        "banner": "https://i.imgur.com/rWydhMi.jpeg",
+        "authorName": "Alice Johnson",
+        "authorPic": "https://i.imgur.com/jivPWYM.png",
+        "publishDate": "2024-01-01",
+        "readDuration": "05",
+        "title": "Understanding the Basics of Coding",
+        "hashtag": ["#tech", "#coding"]
+    },
+    {
+        "id": "B2y7",
+        "banner": "https://i.imgur.com/RxCl85B.png",
+        "authorName": "Bob Smith",
+        "authorPic": "https://i.imgur.com/7lI0tJD.jpeg",
+        "publishDate": "2024-01-05",
+        "readDuration": "07",
+        "title": "The Importance of Wellness",
+        "hashtag": ["#health", "#wellness"]
+    },
+    {
+        "id": "C3z4",
+        "banner": "https://i.imgur.com/9CVErST.png",
+        "authorName": "Carol White",
+        "authorPic": "https://i.imgur.com/3QtmGhS.jpeg",
+        "publishDate": "2024-01-10",
+        "readDuration": "04",
+        "title": "Top Travel Destinations for 2024",
+        "hashtag": ["#travel", "#adventure"]
+    },
+    {
+        "id": "D4w6",
+        "banner": "https://i.imgur.com/4XoWGOQ.jpeg",
+        "authorName": "David Brown",
+        "authorPic": "https://i.imgur.com/R1Yj2Cf.jpeg",
+        "publishDate": "2024-01-15",
+        "readDuration": "06",
+        "title": "Delicious Recipes for Every Occasion",
+        "hashtag": ["#food", "#recipes"]
+    }
+]

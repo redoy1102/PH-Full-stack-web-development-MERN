@@ -1,15 +1,14 @@
-// import { useState } from 'react'
 import './App.css'
-import Bottles from './Components/Bottles/Bottles'
 import Header from './Components/Header/Header'
+import Blogs from './Components/Blogs/Blogs'
 
 function App() {
 
   return (
-    <>
+    <div className='md:mx-40 mt-12'>
       <Header></Header>
-      <Bottles></Bottles>
-    </>
+      <Blogs></Blogs>
+    </div>
   )
 }
 

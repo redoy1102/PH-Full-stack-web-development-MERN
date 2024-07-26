@@ -1,0 +1,21 @@
+.heading {
+    border: 2px solid salmon;
+    text-align: center;
+    padding: 5px;
+    background-color: black;
+    color: yellow;
+    font-weight: bold;
+}
+
+.bottles_container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+}
+
+.cart_bottles_container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 5px;
+    margin-bottom: 50px;
+}
