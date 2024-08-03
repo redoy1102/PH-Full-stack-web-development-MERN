@@ -1,9 +1,14 @@
 // import React from 'react';
 import './Blog.css'
 
-const Blog = ({ blog, handleBookmarkChange, handleBookmarkTotalDurationChange }) => {
+const Blog = ({ blog, handleBookmarkChange, handleBookmarkTotalDurationChange, handleSetShowSpinnerBookmark }) => {
     const {id, banner, authorName, authorPic, publishDate, readDuration, title, hashtag
     } = blog
+    const handleBookmark = () =>{
+        handleSetShowSpinnerBookmark(),
+            handleBookmarkChange(title),
+            handleBookmarkTotalDurationChange(readDuration)
+    }
     return (
         <div>
 
@@ -35,7 +40,9 @@ const Blog = ({ blog, handleBookmarkChange, handleBookmarkTotalDurationChange })
                         {/*right side*/}
                         <div className='flex items-center flex-wrap gap-2'>
                             <p className='font-medium text-xl'>{readDuration} min read</p>
-                            <button onClick={() => (handleBookmarkChange(title), handleBookmarkTotalDurationChange(readDuration))}><i className="font-medium text-xl fa-regular fa-bookmark"></i></button>
+                            <button onClick={() => handleBookmark()}>
+                                <i className="font-medium text-xl fa-regular fa-bookmark"></i>
+                            </button>
                         </div>
                     </div>
 

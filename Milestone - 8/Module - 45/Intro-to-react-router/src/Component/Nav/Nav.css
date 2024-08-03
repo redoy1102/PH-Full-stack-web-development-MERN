@@ -1,0 +1,17 @@
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: chartreuse;
+    padding: 20px;
+}
+
+nav a{
+    margin-right: 20px;
+    color: black;
+    font-weight: bold;
+}
+
+nav a.active{
+    text-decoration: underline;
+}
