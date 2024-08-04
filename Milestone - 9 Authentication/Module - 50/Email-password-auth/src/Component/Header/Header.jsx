@@ -39,8 +39,8 @@ const Header = () => {
                         <ul
                             tabIndex={0}
                             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-                            <li><a>Item 1</a></li>
-                            <li><a>Item 2</a></li>
+                            <li><a className="text-lg">Private Batches</a></li>
+                            <li><a className="text-lg">Courses</a></li>
                             {
                                 !user && <Link to={"/register"} className="btn">Register</Link>
                             }
@@ -48,10 +48,10 @@ const Header = () => {
                     </div>
                     <Link to={"/"} className="btn btn-ghost text-lg md:text-xl">Code with Redoy</Link>
                 </div>
-                <div className="navbar-center hidden lg:flex">
-                    <ul className="menu menu-horizontal px-1">
-                        <li><a>Item 1 medium</a></li>
-                        <li><a>Item 2 medium</a></li>
+                <div className="navbar-center font-bold hidden lg:flex">
+                    <ul className="menu menu-horizontal text-xl px-1">
+                        <li><a>Private Batches</a></li>
+                        <li><a>Courses</a></li>
                     </ul>
                 </div>
                 <div className="navbar-end">

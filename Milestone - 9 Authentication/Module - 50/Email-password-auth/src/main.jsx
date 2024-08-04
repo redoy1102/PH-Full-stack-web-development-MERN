@@ -8,10 +8,12 @@ import {
 } from "react-router-dom";
 import Root from "../Root/Root.jsx";
 import Home from "./Component/Home/Home.jsx";
-import Login from "./Component/Login/Login.jsx";
 import Register from "./Component/Register/Register.jsx";
+import Login from "./Component/Login/Login.jsx";
 import Settings from "./Component/Settings/Settings.jsx";
 import Profile from "./Component/Profile/Profile.jsx";
+import PrivacyPolicy from "./Component/PrivacyPolicy/PrivacyPolicy.jsx";
+import Terms from "./Component/Terms/Terms.jsx";
 
 const router = createBrowserRouter([
     {
@@ -37,6 +39,14 @@ const router = createBrowserRouter([
             {
                 path: "/profile",
                 element: <Profile></Profile>
+            },
+            {
+                path:"/privacyPolicy",
+                element: <PrivacyPolicy></PrivacyPolicy>
+            },
+            {
+                path:"/terms",
+                element: <Terms></Terms>
             }
         ],
     },
