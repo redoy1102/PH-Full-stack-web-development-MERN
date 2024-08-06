@@ -1,4 +1,4 @@
-import { getAuth, signInWithPopup, GoogleAuthProvider, createUserWithEmailAndPassword   } from "firebase/auth";
+import { getAuth, signInWithPopup, GoogleAuthProvider, createUserWithEmailAndPassword, sendEmailVerification, updateProfile } from "firebase/auth";
 import firebaseApp from "../../../firebase.init.js";
 import React, {useContext} from "react";
 import {userContext} from "../../Context/UserContext.jsx";
@@ -35,9 +35,12 @@ const Register = () => {
 
     const handleForm = e => {
         e.preventDefault();
+        const name = e.target.name.value;
         const email = e.target.email.value
         const password = e.target.password.value
         const isChecked = e.target.terms.checked
+        const isPrivacy = e.target.privacy.checked
+
         console.log(email, password, isChecked)
 
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -71,6 +74,11 @@ const Register = () => {
             setManualError("Please accept our terms and conditions.")
             return
         }
+        else if(!isPrivacy){
+            setLogInError('');
+            setManualError("Please accept our privacy policy.")
+            return
+        }
 
         // Resetting errors
         setLogInError('');
@@ -81,10 +89,24 @@ const Register = () => {
         createUserWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
                 const createdUser = userCredential.user;
-                setUser(createdUser)
-                setLoginSuccessMsg(true)
+                // setUser(createdUser)
                 setSpinnerLoading(false);
-                console.log(createdUser)
+                setLoginSuccessMsg(true);
+
+                // Updating the profile after creating an user
+                updateProfile(createdUser, {
+                    displayName: name, photoURL: "https://example.com/jane-q-user/profile.jpg"
+                }).then(() => {
+                    alert("Profile updated.")
+                }).catch((error) => {
+                    console.log(error.message)
+                });
+
+
+                sendEmailVerification(createdUser)
+                    .then(() => {
+                        alert("Please check your mail and verify your email address.")
+                    });
             })
             .catch((error) => {
                 const errorMessage = error.message;
@@ -111,11 +133,14 @@ const Register = () => {
                         {/*Register form start */}
                         <form onSubmit={handleForm} className="card-body">
 
+                            <div className="form-control">
+                                <label className="label"><span className="label-text">Your name</span></label>
+                                <input type="text" placeholder="name" name="name" className="input input-bordered" required/>
+                            </div>
+
                             {/*Email field */}
                             <div className="form-control">
-                                <label className="label">
-                                    <span className="label-text">Email</span>
-                                </label>
+                                <label className="label"><span className="label-text">Email</span></label>
                                 <input type="email" placeholder="email" name="email" className="input input-bordered"
                                        required/>
                             </div>
@@ -144,26 +169,30 @@ const Register = () => {
 
                             <div className="text-xs md:text-base flex justify-start items-center gap-2 mt-2">
                                 <input type="checkbox" name="terms" id="terms"/>
-                                <label htmlFor="terms">I accept the <Link to="/terms" className="ml-1 underline text-blue-600 hover:text-blue-800 visited:text-purple-600">terms
+                                <label htmlFor="terms">I accept the <Link to="/terms"
+                                                                          className="ml-1 underline text-blue-600 hover:text-blue-800 visited:text-purple-600">terms
                                     and condition.</Link>
                                 </label>
                             </div>
 
                             <div className="text-xs md:text-base flex justify-start items-center gap-2 mt-2">
-                                <input type="checkbox" name="terms" id="terms"/>
-                                <label htmlFor="terms">I accept the <Link to="/privacyPolicy" href="#" className="ml-1 underline text-blue-600 hover:text-blue-800 visited:text-purple-600">Privacy Policy</Link>
+                                <input type="checkbox" name="privacy" id="privacy"/>
+                                <label htmlFor="privacy">I accept the <Link to="/privacyPolicy" href="#"
+                                                                            className="ml-1 underline text-blue-600 hover:text-blue-800 visited:text-purple-600">Privacy
+                                    Policy</Link>
                                 </label>
                             </div>
 
                             {/*Buttons */}
                             <div className="form-control mt-6">
-                                {/*<Link to={"/profile"}>*/}
+                                {/*<Link to={loginSuccessMsg ? "/profile" : "/register"}>*/}
                                 <button className="btn btn-primary mb-4 w-full">Register</button>
                                 {/*</Link>*/}
                             </div>
 
                             <div className="text-sm font-medium text-gray-500 dark:text-gray-300">
-                                Already registered? <Link to="/login" className="text-blue-700 hover:underline dark:text-blue-500">Let's
+                                Already registered? <Link to="/login"
+                                                          className="text-blue-700 hover:underline dark:text-blue-500">Let's
                                 login</Link>
                             </div>
                         </form>

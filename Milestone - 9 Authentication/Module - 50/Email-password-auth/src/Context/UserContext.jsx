@@ -18,7 +18,7 @@ export const UserContext = ({children}) => {
                 loginSuccessMsg, setLoginSuccessMsg,
                 manualError, setManualError,
                 spinnerLoading, setSpinnerLoading,
-                showPassword, setShowPassword
+                showPassword, setShowPassword,
             }
         }>
             {children}

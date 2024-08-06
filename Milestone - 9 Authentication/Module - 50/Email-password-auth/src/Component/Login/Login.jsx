@@ -1,8 +1,8 @@
 import {IoEye, IoEyeOff} from "react-icons/io5";
 import {BounceLoader} from "react-spinners";
-import {useContext} from "react";
+import {useContext, useRef} from "react";
 import {userContext} from "../../Context/UserContext.jsx";
-import {signInWithEmailAndPassword , getAuth, GoogleAuthProvider, signInWithPopup} from "firebase/auth";
+import {signInWithEmailAndPassword , getAuth, GoogleAuthProvider, signInWithPopup, sendPasswordResetEmail } from "firebase/auth";
 import firebaseApp from "../../../firebase.init.js";
 import {Link} from "react-router-dom";
 
@@ -13,9 +13,11 @@ const Login = () => {
     const {manualError, setManualError} = useContext(userContext);
     const {spinnerLoading, setSpinnerLoading} = useContext(userContext);
     const {showPassword, setShowPassword} = useContext(userContext);
+    const emailRef = useRef();
 
     const auth = getAuth(firebaseApp);
     const provider = new GoogleAuthProvider();
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     const handleGooglePopSignIn = () => {
         signInWithPopup(auth, provider)
@@ -35,9 +37,9 @@ const Login = () => {
         e.preventDefault();
         const email = e.target.email.value
         const password = e.target.password.value
-        console.log(email, password)
+        // console.log(email, password)
 
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
         if (!emailRegex.test(email)) {
             setLogInError('');
             setManualError("Please enter a valid email address.");
@@ -68,14 +70,22 @@ const Login = () => {
         setLogInError('');
         setLoginSuccessMsg('')
         setManualError('')
-        setSpinnerLoading(true);
+        // setSpinnerLoading(true);
 
         signInWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
                 const loggedInUser = userCredential.user;
-                setUser(loggedInUser)
-                setLoginSuccessMsg(true)
-                setSpinnerLoading(false);
+                // setUser(loggedInUser)
+                // setLoginSuccessMsg(true)
+                // setSpinnerLoading(false);
+                if(userCredential.user.emailVerified === false)
+                {
+                    alert("Please check your mail and verify your email address.")
+                }
+                else{
+                    setUser(loggedInUser)
+                    setLoginSuccessMsg(true)
+                }
                 console.log(loggedInUser)
             })
             .catch((error) => {
@@ -83,6 +93,33 @@ const Login = () => {
                 setLogInError(true);
                 setSpinnerLoading(false);
                 console.log(errorMessage)
+            });
+    }
+
+    const handleForgetPassword = () => {
+        const email = emailRef.current.value;
+        if(!email){
+            setLogInError('');
+            setManualError("Please provide an email address.");
+            return;
+        }
+        else if (!emailRegex.test(email)) {
+            setLogInError('');
+            setManualError("Please enter a valid email address.");
+            return;
+        }
+
+        // Resetting errors
+        setLogInError('');
+        setManualError('')
+
+        sendPasswordResetEmail(auth, email)
+            .then(() => {
+                alert("Please check your email.")
+            })
+            .catch((error) => {
+                const errorMessage = error.message;
+                console.log(errorMessage);
             });
     }
 
@@ -108,7 +145,12 @@ const Login = () => {
                                 <label className="label">
                                     <span className="label-text">Email</span>
                                 </label>
-                                <input type="email" placeholder="email" name="email" className="input input-bordered"
+                                <input
+                                    type="email"
+                                    placeholder="email"
+                                    name="email"
+                                    className="input input-bordered"
+                                    ref={emailRef}
                                        required/>
                             </div>
 
@@ -134,8 +176,11 @@ const Login = () => {
                                     </span>
                                 </div>
                                 <label className="label">
-                                    <a href="#" className="text-sm text-blue-700 hover:underline dark:text-blue-500">Forgot
-                                        password?</a>
+                                    <a href="#"
+                                       className="text-sm text-blue-700 hover:underline dark:text-blue-500"
+                                        onClick={handleForgetPassword}
+                                    >Forgot password?
+                                    </a>
                                 </label>
                             </div>
 
