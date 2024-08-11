@@ -13,13 +13,20 @@ function App() {
 
         console.log(user)
 
+        // data is sending to the server
         fetch('http://localhost:3000/users', {
             method: 'POST',
             headers: {'content-type': 'application/json'},
             body: JSON.stringify(user)
         })
             .then(res => res.json())
-            .then(data => console.log(data))
+            .then(data => {
+                console.log(data)
+                if(data.insertedId){
+                    // alert('User added successfully.');
+                    form.reset();
+                }
+            })
     }
   return (
     <>
