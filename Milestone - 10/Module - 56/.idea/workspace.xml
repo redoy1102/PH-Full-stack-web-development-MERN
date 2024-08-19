@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c50e80a8-bec8-43e9-96a0-49e0a16b0a37" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Client-Coffee-Shop/src/Components/AddCoffee.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client-Coffee-Shop/src/Components/Authenticate/SignIn.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client-Coffee-Shop/src/Components/Authenticate/SignUp.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client-Coffee-Shop/src/Components/CoffeeContainer.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client-Coffee-Shop/src/Components/CoffeeDetails.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client-Coffee-Shop/src/Components/ErrorPage.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client-Coffee-Shop/src/Components/Footer.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client-Coffee-Shop/src/Components/Home.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client-Coffee-Shop/src/Components/NavBar.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client-Coffee-Shop/src/Components/UpdateCoffee.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client-Coffee-Shop/src/Components/Users.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client-Coffee-Shop/src/Components/Utlities/BackButton.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client-Coffee-Shop/src/Firebase/firebase.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client-Coffee-Shop/src/Providers/AuthProvider.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Server-Coffee-Shop/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Server-Coffee-Shop/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Server-Coffee-Shop/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/imgs link" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="JSX File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2kXzPgvy0bvOwUeRGRWMmB97pvo" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\WebStorm 2024.1.5\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-WS-241.18034.50" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c50e80a8-bec8-43e9-96a0-49e0a16b0a37" name="Changes" comment="" />
+      <created>1723444691448</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1723444691448</updated>
+      <workItem from="1723444693711" duration="8005000" />
+      <workItem from="1723459236307" duration="1180000" />
+      <workItem from="1723520833585" duration="481000" />
+      <workItem from="1723525716467" duration="12403000" />
+      <workItem from="1723606915013" duration="5419000" />
+      <workItem from="1723618510215" duration="9261000" />
+      <workItem from="1723703907322" duration="9835000" />
+      <workItem from="1723740918322" duration="6763000" />
+      <workItem from="1723863118244" duration="15496000" />
+      <workItem from="1723912708988" duration="4213000" />
+      <workItem from="1723948554427" duration="8068000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
