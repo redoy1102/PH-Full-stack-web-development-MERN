@@ -26,6 +26,8 @@ import SignUp from "./Components/Authenticate/SignUp.jsx";
 import AuthProvider from "./Providers/AuthProvider.jsx";
 import Users from "./Components/Users.jsx";
 
+const queryClient = new QueryClient()
+
 const router = createBrowserRouter([
     {
         path: "/",
